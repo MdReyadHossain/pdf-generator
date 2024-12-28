@@ -43,29 +43,30 @@ function PdfGenerater() {
     };
 
     return (
-        <div style={{ display: "flex", gap: "20px" }}>
-            <form onSubmit={handleSubmit} style={{ flex: 1 }}>
-                <textarea
-                    className="txt"
-                    name="txt"
-                    onChange={handleInputChange}
-                    style={{ width: "40vw", height: "80vh" }}
+        <>
+            <div style={{ display: "flex", gap: "20px" }}>
+                <form onSubmit={handleSubmit} style={{ flex: 1 }}>
+                    <textarea
+                        className="txt"
+                        name="txt"
+                        onChange={handleInputChange}
+                        style={{ width: "40vw", height: "80vh" }}
+                    />
+                    <br />
+                    <button type="submit">Download PDF</button>
+                </form>
+
+                <iframe
+                    src={pdfUrl ?? ''}
+                    // src={`https://docs.google.com/gview?url=${pdfUrl}&embedded=true`}
+                    // src={`https://view.officeapps.live.com/op/embed.aspx?src=${pdfUrl}`}
+                    // src={`https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdfUrl}`}
+                    title="PDF Preview"
+                    style={{ width: "40vw", height: "80vh", border: "1px solid #ccc" }}
                 />
-                <br />
-                <button type="submit">Download PDF</button>
-            </form>
-
-            <iframe
-                src={pdfUrl ?? ''}
-                // src={`https://docs.google.com/gview?url=${pdfUrl}&embedded=true`}
-                // src={`https://view.officeapps.live.com/op/embed.aspx?src=${pdfUrl}`}
-                // src={`https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdfUrl}`}
-                title="PDF Preview"
-                style={{ width: "40vw", height: "80vh", border: "1px solid #ccc" }}
-            />
-
-            <a href="https://its-reyad.netlify.app/">about me</a>
-        </div>
+            </div>
+            <a style={{ margin: '10px' }} href="https://its-reyad.netlify.app/">about me</a>
+        </>
     )
 }
 export default PdfGenerater;
