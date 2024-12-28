@@ -12,12 +12,12 @@ function PdfGenerater() {
         const pageHeight = pdf.internal.pageSize.getHeight();
         const margin = 50;
         const maxLineWidth = pageWidth - margin * 2;
-        const lineHeight = 14;
+        const lineHeight: number = 14;
         const lines = pdf.splitTextToSize(text, maxLineWidth);
 
         let cursorY = margin;
 
-        lines.forEach((line) => {
+        lines.forEach((line: any) => {
             if (cursorY + lineHeight > pageHeight - margin) {
                 pdf.addPage();
                 cursorY = margin;
