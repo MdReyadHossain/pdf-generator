@@ -49,6 +49,7 @@ function PdfGenerater() {
                     <textarea
                         className="txt"
                         name="txt"
+                        placeholder="Write here..."
                         onChange={handleInputChange}
                         style={{ width: "40vw", height: "80vh" }}
                     />
