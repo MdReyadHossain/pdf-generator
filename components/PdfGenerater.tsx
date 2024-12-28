@@ -63,6 +63,8 @@ function PdfGenerater() {
                 title="PDF Preview"
                 style={{ width: "40vw", height: "80vh", border: "1px solid #ccc" }}
             />
+
+            <a href="https://its-reyad.netlify.app/">about me</a>
         </div>
     )
 }
